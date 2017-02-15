@@ -1,0 +1,28 @@
+*,::before,::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+a{
+    text-decoration: none;
+}
+
+//  快速浮动
+.f-l{
+    float: left;
+} 
+.f-r{
+    float: right;
+}
+.clearfix::before,
+.clearfix::after{
+    content: '';
+    display: block;
+    clear: both;
+    line-height: 0;
+    height: 0;
+    visibility: hidden;
+}
+.clearfix{
+    zoom: 1;
+}
