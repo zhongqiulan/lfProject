@@ -6,6 +6,11 @@
 a{
     text-decoration: none;
 }
+input{
+    border: none;
+    -webkit-appearance: none;
+    outline: none;
+}
 
 //  快速浮动
 .f-l{

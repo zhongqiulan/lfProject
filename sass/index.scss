@@ -1,8 +1,143 @@
 //  导入库文件
 @import 'normalize.min.scss';
 @import 'swiper.min.scss';
-
+//  导入 自己定义的函数
+@import 'function.scss'; 
 // 导入自己的base文件
-@import 'base.scss'; 
+@import 'base.scss';
 //  导入 分辨屏幕的样式
 @import 'screen.scss';
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background-color: #f7f7f7;
+}
+
+//  乐乎顶级布局
+.lofter-layout {
+    height: 100%;
+    //  容器高度
+    >.swiper-container {
+        height: 100%;
+    }
+    //  tab栏设置 分页器
+    >.lofter-layout-tab {
+        position: absolute;
+        background-color: rgba(255, 255, 255, .5);
+        bottom: 0px;
+        width: 100%;
+        //  高度
+        height: (97rem/32);
+        //  分页器 span样式 
+        span {
+            height: 100%;
+            width: 20%;
+            // border: 1px solid #000;
+            border-radius: 0;
+            position: absolute;
+            //  禁止蓝色高亮
+            cursor: none;
+            &::before {
+                position: absolute;
+                font-size: (20rem/32);
+                text-align: center;
+                width: 100%;
+                left: 0;
+                bottom: (5rem/32);
+                color: #84A0A3;
+            }
+            //  左边两个 
+            &:nth-child(1) {
+                left: 0px;
+                background: url('../img/01.app-icons/bb_btn_home_unselect.png') no-repeat center (20rem/32);
+                background-size: (40rem/32) (40rem/32);
+                //  使用伪元素来设置内容
+                &::before {
+                    content: '首页';
+                }
+            }
+            &:nth-child(2) {
+                left: 20%;
+                background: url('../img/01.app-icons/bb_btn_label_unselect.png') no-repeat center (20rem/32);
+                background-size: (54rem/32) (41rem/32);
+                //  伪元素 设置内容
+                &::before {
+                    content: '发现';
+                }
+            }
+            &:nth-child(3) {
+                right: 20%;
+                background: url('../img/01.app-icons/bb_btn_message_select.png') no-repeat center (20rem/32);
+                background-size: (40rem/32) (40rem/32);
+                //  伪元素 设置内容
+                &::before {
+                    content: '消息';
+                }
+            }
+            &:nth-child(4) {
+                right: 0;
+                background: url('../img/01.app-icons/bb_btn_account_select.png') no-repeat center (20rem/32);
+                background-size: (40rem/32) (40rem/32);
+                //  伪元素 设置内容
+                &::before {
+                    content: '我的';
+                }
+            }
+        }
+    }
+    //  照相机 跟分页器并列
+    .camera {
+        position: absolute;
+        bottom: 0px;
+        z-index: 11;
+        left: 50%;
+        transform: translateX(-50%);
+        height: (97rem/32);
+        width: 20%;
+        background: url('../img/01.app-icons/bb_btn_post_select.png')no-repeat center (18rem/32);
+        background-size: (90rem/32) (60rem/32);
+    }
+}
+
+//  首页
+
+//  发现区域 
+.discover{
+    .header{
+        background-color: white;
+        padding: (20rem/32) (20rem/32) (10rem/32);
+        //  定位
+        position: relative;
+        input{
+            height:(60rem/32) ;
+            width: 100%;
+            background-color: #eee;
+            border-radius: (10rem/32);
+            padding-left: changeSize(160rem);
+        }
+        a{
+            position: absolute;
+            &.search{
+                width: changeSize(32rem);
+                height:changeSize(32rem);
+                background: url('../img/01.app-icons/explore_search.png') no-repeat center /contain;
+                left:changeSize(125rem);
+                top:changeSize(33rem);
+            }
+            &.add{
+                width: changeSize(42rem);
+                height: changeSize(35rem);
+                background: url('../img/01.app-icons/dashboard_find_friend.png') no-repeat center/cover;
+                top:changeSize(10rem);
+                right:changeSize(17rem);
+                box-sizing: content-box;
+                padding: 10px;
+                background-origin: content-box;
+            }
+        }
+    }
+}

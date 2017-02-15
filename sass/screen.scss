@@ -4,17 +4,17 @@ $sizes:20;
 @mixin fontSizeWithScreen($screenSize){
     @media screen and (width:$screenSize){
         html{
-            font-size:$screenSize/$sizes rem;
+            font-size:($screenSize/$sizes);
         }
     }
 }
 //  360
-@include fontSizeWithScreen(360);
+@include fontSizeWithScreen(360px);
 // 375
-@include fontSizeWithScreen(375);
+@include fontSizeWithScreen(375px);
 //  320
-@include fontSizeWithScreen(320);
+@include fontSizeWithScreen(320px);
 // 412 
-@include fontSizeWithScreen(412);
+@include fontSizeWithScreen(412px);
 // 414
-@include fontSizeWithScreen(414);
+@include fontSizeWithScreen(414px);

@@ -1,0 +1,4 @@
+//  定义计算尺寸的函数
+@function changeSize($baseSize){
+    @return ($baseSize/32);
+}

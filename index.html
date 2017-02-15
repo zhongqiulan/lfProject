@@ -1,15 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <!-- 视口属性 -->
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>LOFTER</title>
-    <link rel="stylesheet" href="css/index.css" /> 
+    <link rel="stylesheet" href="css/index.css" />
 </head>
+
 <body>
-    <div class="lofter-layout"></div>
+    <!-- 乐乎顶级盒子 -->
+    <div class="lofter-layout">
+        <!-- 照相机 -->
+        <a class='camera' href="#"></a>
+        <!-- 主界面tab栏  -->
+        <div class="lofter-layout-tab swiper-pagination">
+        </div>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <!-- 区域-index start -->
+                <div class="index swiper-slide">
+                </div>
+                <!-- 区域index end -->
+                <!-- 区域 discover start -->
+                <div class="discover swiper-slide">
+                    <div class="header">
+                        <a class='search'  href="#"></a>
+                        <input type="text" placeholder="搜索标签、用户、标题">
+                        <a class='add'  href="#"></a>
+                    </div>
+                </div>
+                <!-- 区域 discover end -->
+                <div class="swiper-slide">section3</div>
+                <div class="swiper-slide">section4</div>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
 <!-- 导入js文件 -->
 <script src="js/swiper.min.js"></script>
