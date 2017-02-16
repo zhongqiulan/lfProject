@@ -105,13 +105,13 @@ body {
 //  首页
 .index {
     // 顶级背景色
-    background-color: white;
+    background-color: #EEEEEE;
     //  设置上下的 padding
-    padding-top: changeSize(124rem);
+    padding-top: changeSize(84rem);
     padding-bottom: changeSize(97rem);
     //  顶级swiper 分页器的样式
     .index-pagination {
-        height: changeSize(124rem);
+        height: changeSize(80rem);
         width: 100%;
         display: flex;
         //  左右居中
@@ -123,7 +123,7 @@ body {
         background-color: white;
         //  使用定位的方式 设置到顶部
         position: absolute;
-        top:0px;
+        top: 0px;
         span {
             height: changeSize(84rem);
             line-height: changeSize(84rem);
@@ -143,10 +143,14 @@ body {
         position: absolute;
         height: changeSize(32rem);
         width: changeSize(41rem);
+        //  通过padding 将他压大
+        padding: 0 changeSize(10rem) changeSize(10rem);
+        box-sizing: content-box;
         background: url("../img/01.app-icons/dashboard_find_friend.png") no-repeat center/contain;
+        background-origin: content-box;
         //  位置
         right: changeSize(33rem);
-        top: changeSize(68rem);
+        top: changeSize(18rem);
         //  设置层级
         z-index: 20;
     }
@@ -161,16 +165,18 @@ body {
     height: 100%;
     .index-attention-slide {
         height: auto;
+        background-color: white;
     }
 }
 
 //  首页 订阅区域样式
-.index-subscribe-container{
+.index-subscribe-container {
     height: 100%;
     .index-subscribe-slide {
         height: auto;
+        background-color: white;
     }
-} 
+}
 
 //  发现区域 
 .discover {
@@ -204,6 +210,97 @@ body {
                 box-sizing: content-box;
                 padding: 10px;
                 background-origin: content-box;
+            }
+        }
+    }
+}
+
+//  信息区域
+.message {
+    // 顶级背景色
+    background-color: white;
+    //  设置上下的 padding
+    padding-top: changeSize(80rem);
+    padding-bottom: changeSize(97rem);
+    // message 顶部分页器 
+    .message-pagination {
+        //  弹性布局 
+        display: flex;
+        height: changeSize(80rem);
+        background-color: white;
+        width: 100%;
+        // 副轴对齐
+        align-items: flex-end;
+        // 定位 设置上去
+        position: absolute;
+        top: 0;
+        span {
+            background-color: white;
+            border-radius: 0;
+            color: black;
+            flex: 1;
+            height: changeSize(76rem);
+            line-height: changeSize(76rem);
+            text-align: center;
+            cursor: none;
+            // 高亮状态
+            &.swiper-pagination-bullet-active {
+                border-bottom: changeSize(4rem) solid #96B81C;
+            }
+        }
+    }
+    // 内容区域
+}
+
+// 我的 区域
+.self {
+    // 顶部区域 
+    .self-header {
+        height: changeSize(240rem);
+        display: flex;
+        position: relative;
+        background-color: rgba(255,255,255,.5);
+        // 伪元素 制作 背景图片
+        &::after{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: url("../img/02.head-icons/lofter_header_icon_ (1000).jpg") no-repeat center /cover;
+            z-index:-1;
+        }
+        .header-l {
+            width: changeSize(195rem);
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img {
+                width: changeSize(145rem);
+                height: changeSize(145rem);
+                border-radius: 50%;
+            }
+        }
+        .header-r {
+            flex: 1;
+            height: 100%;
+            h3 {
+                margin-top: changeSize(66rem);
+                font-size:changeSize(29rem);
+            }
+            p {
+                margin: changeSize(20rem) 0;
+                color:#919598;
+                font-size:changeSize(19rem);
+            }
+            .habbit-box{
+                padding-right: changeSize(157rem);
+                display: flex;
+                a{
+                    font-size:changeSize(25rem);
+                    color:black;
+                    flex:1;
+                }
             }
         }
     }

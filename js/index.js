@@ -4,6 +4,8 @@ window.onload = function () {
     lofterSwiperReset();
     //  区域1 的swiper
     indexSwiperReset();
+    // 区域3 的swiper
+    messageSwiperReset();
 }
 
 //  初始化顶级swiper
@@ -52,5 +54,26 @@ function indexSwiperReset() {
         slidesPerView: 'auto',
         mousewheelControl: true,
         freeMode: true
+    })
+}
+
+// 初始化 区域3的 swiper
+function messageSwiperReset(){
+    var messageSwiper = new Swiper('.message-container',{
+         //  分页器
+        pagination: '.message-pagination',
+        //  分页器允许点击
+        paginationClickable: true,
+        //  自定义分页器内容
+        paginationBulletRender: function (swiper, index, className) {
+            if (index == 0) {
+                return '<span class="' + className + '">动态</span>';
+            } else if (index == 1) {
+                return '<span class="' + className + '">消息</span>';
+            }else if(index ==2){
+                return '<span class="' + className + '">聊天</span>';
+            }
+
+        }
     })
 }
