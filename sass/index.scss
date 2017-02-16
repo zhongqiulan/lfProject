@@ -1,307 +1,393 @@
-//  导入库文件
-@import 'normalize.min.scss';
-@import 'swiper.min.scss';
-//  导入 自己定义的函数
-@import 'function.scss';
-// 导入自己的base文件
-@import 'base.scss';
-//  导入 分辨屏幕的样式
-@import 'screen.scss';
-html,
-body {
-    height: 100%;
-}
-
-body {
-    background-color: #f7f7f7;
-}
-
-//  乐乎顶级布局
-.lofter-layout {
-    height: 100%;
-    //  容器高度
-    >.swiper-container {
+    //  导入库文件
+    @import 'normalize.min.scss';
+    @import 'swiper.min.scss';
+    //  导入 自己定义的函数
+    @import 'function.scss';
+    // 导入自己的base文件
+    @import 'base.scss';
+    //  导入 分辨屏幕的样式
+    @import 'screen.scss';
+    html,
+    body {
         height: 100%;
     }
-    //  tab栏设置 分页器
-    >.lofter-layout-tab {
-        position: absolute;
-        background-color: rgba(255, 255, 255, .5);
-        bottom: 0px;
-        width: 100%;
-        //  高度
-        height: (97rem/32);
-        //  分页器 span样式 
-        span {
+    
+    body {
+        background-color: #f7f7f7;
+    }
+    
+    //  乐乎顶级布局
+    .lofter-layout {
+        height: 100%;
+        //  容器高度
+        >.swiper-container {
             height: 100%;
-            width: 20%;
-            // border: 1px solid #000;
-            border-radius: 0;
+        }
+        //  tab栏设置 分页器
+        >.lofter-layout-tab {
             position: absolute;
-            //  禁止蓝色高亮
-            cursor: none;
-            &::before {
+            background-color: rgba(255, 255, 255, .5);
+            bottom: 0px;
+            width: 100%;
+            //  高度
+            height: (97rem/32);
+            //  分页器 span样式 
+            span {
+                height: 100%;
+                width: 20%;
+                // border: 1px solid #000;
+                border-radius: 0;
                 position: absolute;
-                font-size: (20rem/32);
-                text-align: center;
-                width: 100%;
-                left: 0;
-                bottom: (5rem/32);
-                color: #84A0A3;
-            }
-            //  左边两个 
-            &:nth-child(1) {
-                left: 0px;
-                background: url('../img/01.app-icons/bb_btn_home_unselect.png') no-repeat center (20rem/32);
-                background-size: (40rem/32) (40rem/32);
-                //  使用伪元素来设置内容
+                //  禁止蓝色高亮
+                cursor: none;
                 &::before {
-                    content: '首页';
+                    position: absolute;
+                    font-size: (20rem/32);
+                    text-align: center;
+                    width: 100%;
+                    left: 0;
+                    bottom: (5rem/32);
+                    color: #84A0A3;
                 }
-            }
-            &:nth-child(2) {
-                left: 20%;
-                background: url('../img/01.app-icons/bb_btn_label_unselect.png') no-repeat center (20rem/32);
-                background-size: (54rem/32) (41rem/32);
-                //  伪元素 设置内容
-                &::before {
-                    content: '发现';
+                //  左边两个 
+                &:nth-child(1) {
+                    left: 0px;
+                    background: url('../img/01.app-icons/bb_btn_home_unselect.png') no-repeat center (20rem/32);
+                    background-size: (40rem/32) (40rem/32);
+                    //  使用伪元素来设置内容
+                    &::before {
+                        content: '首页';
+                    }
                 }
-            }
-            &:nth-child(3) {
-                right: 20%;
-                background: url('../img/01.app-icons/bb_btn_message_select.png') no-repeat center (20rem/32);
-                background-size: (40rem/32) (40rem/32);
-                //  伪元素 设置内容
-                &::before {
-                    content: '消息';
+                &:nth-child(2) {
+                    left: 20%;
+                    background: url('../img/01.app-icons/bb_btn_label_unselect.png') no-repeat center (20rem/32);
+                    background-size: (54rem/32) (41rem/32);
+                    //  伪元素 设置内容
+                    &::before {
+                        content: '发现';
+                    }
                 }
-            }
-            &:nth-child(4) {
-                right: 0;
-                background: url('../img/01.app-icons/bb_btn_account_select.png') no-repeat center (20rem/32);
-                background-size: (40rem/32) (40rem/32);
-                //  伪元素 设置内容
-                &::before {
-                    content: '我的';
+                &:nth-child(3) {
+                    right: 20%;
+                    background: url('../img/01.app-icons/bb_btn_message_select.png') no-repeat center (20rem/32);
+                    background-size: (40rem/32) (40rem/32);
+                    //  伪元素 设置内容
+                    &::before {
+                        content: '消息';
+                    }
+                }
+                &:nth-child(4) {
+                    right: 0;
+                    background: url('../img/01.app-icons/bb_btn_account_select.png') no-repeat center (20rem/32);
+                    background-size: (40rem/32) (40rem/32);
+                    //  伪元素 设置内容
+                    &::before {
+                        content: '我的';
+                    }
                 }
             }
         }
-    }
-    //  照相机 跟分页器并列
-    .camera {
-        position: absolute;
-        bottom: 0px;
-        z-index: 11;
-        left: 50%;
-        transform: translateX(-50%);
-        height: (97rem/32);
-        width: 20%;
-        background: url('../img/01.app-icons/bb_btn_post_select.png')no-repeat center (18rem/32);
-        background-size: (90rem/32) (60rem/32);
-    }
-}
-
-//  首页
-.index {
-    // 顶级背景色
-    background-color: #EEEEEE;
-    //  设置上下的 padding
-    padding-top: changeSize(84rem);
-    padding-bottom: changeSize(97rem);
-    //  顶级swiper 分页器的样式
-    .index-pagination {
-        height: changeSize(80rem);
-        width: 100%;
-        display: flex;
-        //  左右居中
-        justify-content: center;
-        align-items: flex-end;
-        // 底部横线
-        border-bottom: changeSize(2rem) solid #ECEDE7;
-        //  背景为白色
-        background-color: white;
-        //  使用定位的方式 设置到顶部
-        position: absolute;
-        top: 0px;
-        span {
-            height: changeSize(84rem);
-            line-height: changeSize(84rem);
-            color: black;
-            width: 30%;
-            border-radius: 0;
-            background-color: transparent;
-            //  去除高亮效果
-            cursor: none;
-            &.swiper-pagination-bullet-active {
-                border-bottom: changeSize(4rem) solid #9AC327;
-            }
-        }
-    }
-    //  添加好友的a标签
-    .add-friend {
-        position: absolute;
-        height: changeSize(32rem);
-        width: changeSize(41rem);
-        //  通过padding 将他压大
-        padding: 0 changeSize(10rem) changeSize(10rem);
-        box-sizing: content-box;
-        background: url("../img/01.app-icons/dashboard_find_friend.png") no-repeat center/contain;
-        background-origin: content-box;
-        //  位置
-        right: changeSize(33rem);
-        top: changeSize(18rem);
-        //  设置层级
-        z-index: 20;
-    }
-    //  顶级swiper的高度
-    .index-container {
-        height: 100%;
-    }
-}
-
-//  首页 关注区域样式
-.index-attention-container {
-    height: 100%;
-    .index-attention-slide {
-        height: auto;
-        background-color: white;
-    }
-}
-
-//  首页 订阅区域样式
-.index-subscribe-container {
-    height: 100%;
-    .index-subscribe-slide {
-        height: auto;
-        background-color: white;
-    }
-}
-
-//  发现区域 
-.discover {
-    .header {
-        background-color: white;
-        padding: (20rem/32) (20rem/32) (10rem/32);
-        //  定位
-        position: relative;
-        input {
-            height: (60rem/32);
-            width: 100%;
-            background-color: #eee;
-            border-radius: (10rem/32);
-            padding-left: changeSize(160rem);
-        }
-        a {
+        //  照相机 跟分页器并列
+        .camera {
             position: absolute;
-            &.search {
-                width: changeSize(32rem);
-                height: changeSize(32rem);
-                background: url('../img/01.app-icons/explore_search.png') no-repeat center /contain;
-                left: changeSize(125rem);
-                top: changeSize(33rem);
-            }
-            &.add {
-                width: changeSize(42rem);
-                height: changeSize(35rem);
-                background: url('../img/01.app-icons/dashboard_find_friend.png') no-repeat center/cover;
-                top: changeSize(10rem);
-                right: changeSize(17rem);
-                box-sizing: content-box;
-                padding: 10px;
-                background-origin: content-box;
-            }
+            bottom: 0px;
+            z-index: 11;
+            left: 50%;
+            transform: translateX(-50%);
+            height: (97rem/32);
+            width: 20%;
+            background: url('../img/01.app-icons/bb_btn_post_select.png')no-repeat center (18rem/32);
+            background-size: (90rem/32) (60rem/32);
         }
     }
-}
-
-//  信息区域
-.message {
-    // 顶级背景色
-    background-color: white;
-    //  设置上下的 padding
-    padding-top: changeSize(80rem);
-    padding-bottom: changeSize(97rem);
-    // message 顶部分页器 
-    .message-pagination {
-        //  弹性布局 
-        display: flex;
-        height: changeSize(80rem);
-        background-color: white;
-        width: 100%;
-        // 副轴对齐
-        align-items: flex-end;
-        // 定位 设置上去
-        position: absolute;
-        top: 0;
-        span {
-            background-color: white;
-            border-radius: 0;
-            color: black;
-            flex: 1;
-            height: changeSize(76rem);
-            line-height: changeSize(76rem);
-            text-align: center;
-            cursor: none;
-            // 高亮状态
-            &.swiper-pagination-bullet-active {
-                border-bottom: changeSize(4rem) solid #96B81C;
-            }
-        }
-    }
-    // 内容区域
-}
-
-// 我的 区域
-.self {
-    // 顶部区域 
-    .self-header {
-        height: changeSize(240rem);
-        display: flex;
-        position: relative;
-        background-color: rgba(255,255,255,.5);
-        // 伪元素 制作 背景图片
-        &::after{
-            content: '';
-            position: absolute;
+    
+    //  首页
+    .index {
+        // 顶级背景色
+        background-color: #EEEEEE;
+        //  设置上下的 padding
+        padding-top: changeSize(84rem);
+        padding-bottom: changeSize(97rem);
+        //  顶级swiper 分页器的样式
+        .index-pagination {
+            height: changeSize(80rem);
             width: 100%;
-            height: 100%;
-            background: url("../img/02.head-icons/lofter_header_icon_ (1000).jpg") no-repeat center /cover;
-            z-index:-1;
-        }
-        .header-l {
-            width: changeSize(195rem);
-            height: 100%;
             display: flex;
+            //  左右居中
             justify-content: center;
-            align-items: center;
-            img {
-                width: changeSize(145rem);
-                height: changeSize(145rem);
-                border-radius: 50%;
+            align-items: flex-end;
+            // 底部横线
+            border-bottom: changeSize(2rem) solid #ECEDE7;
+            //  背景为白色
+            background-color: white;
+            //  使用定位的方式 设置到顶部
+            position: absolute;
+            top: 0px;
+            span {
+                height: changeSize(84rem);
+                line-height: changeSize(84rem);
+                color: black;
+                width: 30%;
+                border-radius: 0;
+                background-color: transparent;
+                //  去除高亮效果
+                cursor: none;
+                &.swiper-pagination-bullet-active {
+                    border-bottom: changeSize(4rem) solid #9AC327;
+                }
             }
         }
-        .header-r {
-            flex: 1;
+        //  添加好友的a标签
+        .add-friend {
+            position: absolute;
+            height: changeSize(32rem);
+            width: changeSize(41rem);
+            //  通过padding 将他压大
+            padding: 0 changeSize(10rem) changeSize(10rem);
+            box-sizing: content-box;
+            background: url("../img/01.app-icons/dashboard_find_friend.png") no-repeat center/contain;
+            background-origin: content-box;
+            //  位置
+            right: changeSize(33rem);
+            top: changeSize(18rem);
+            //  设置层级
+            z-index: 20;
+        }
+        //  顶级swiper的高度
+        .index-container {
             height: 100%;
-            h3 {
-                margin-top: changeSize(66rem);
-                font-size:changeSize(29rem);
+        }
+    }
+    
+    //  首页 关注区域样式
+    .index-attention-container {
+        height: 100%;
+        .index-attention-slide {
+            height: auto;
+            background-color: white;
+        }
+    }
+    
+    //  首页 订阅区域样式
+    .index-subscribe-container {
+        height: 100%;
+        .index-subscribe-slide {
+            height: auto;
+            background-color: white;
+        }
+    }
+    
+    //  发现区域 
+    .discover {
+        .header {
+            background-color: white;
+            padding: (20rem/32) (20rem/32) (10rem/32);
+            //  定位
+            position: relative;
+            input {
+                height: (60rem/32);
+                width: 100%;
+                background-color: #eee;
+                border-radius: (10rem/32);
+                padding-left: changeSize(160rem);
             }
-            p {
-                margin: changeSize(20rem) 0;
-                color:#919598;
-                font-size:changeSize(19rem);
-            }
-            .habbit-box{
-                padding-right: changeSize(157rem);
-                display: flex;
-                a{
-                    font-size:changeSize(25rem);
-                    color:black;
-                    flex:1;
+            a {
+                position: absolute;
+                &.search {
+                    width: changeSize(32rem);
+                    height: changeSize(32rem);
+                    background: url('../img/01.app-icons/explore_search.png') no-repeat center /contain;
+                    left: changeSize(125rem);
+                    top: changeSize(33rem);
+                }
+                &.add {
+                    width: changeSize(42rem);
+                    height: changeSize(35rem);
+                    background: url('../img/01.app-icons/dashboard_find_friend.png') no-repeat center/cover;
+                    top: changeSize(10rem);
+                    right: changeSize(17rem);
+                    box-sizing: content-box;
+                    padding: 10px;
+                    background-origin: content-box;
                 }
             }
         }
     }
-}
+    
+    //  信息区域
+    .message {
+        // 顶级背景色
+        background-color: white;
+        //  设置上下的 padding
+        padding-top: changeSize(80rem);
+        padding-bottom: changeSize(97rem);
+        // message 顶部分页器 
+        .message-pagination {
+            //  弹性布局 
+            display: flex;
+            height: changeSize(80rem);
+            background-color: white;
+            width: 100%;
+            // 副轴对齐
+            align-items: flex-end;
+            // 定位 设置上去
+            position: absolute;
+            top: 0;
+            span {
+                background-color: white;
+                border-radius: 0;
+                color: black;
+                flex: 1;
+                height: changeSize(76rem);
+                line-height: changeSize(76rem);
+                text-align: center;
+                cursor: none;
+                // 高亮状态
+                &.swiper-pagination-bullet-active {
+                    border-bottom: changeSize(4rem) solid #96B81C;
+                }
+            }
+        }
+        // 内容区域
+    }
+    
+    // 我的 区域
+    .self {
+        // 顶部区域 
+        .self-header {
+            height: changeSize(240rem);
+            display: flex;
+            position: relative;
+            background-color: rgba(255, 255, 255, .5);
+            // 伪元素 制作 背景图片
+            &::after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background: url("../img/02.head-icons/lofter_header_icon_ (1000).jpg") no-repeat center /cover;
+                z-index: -1;
+            }
+            .header-l {
+                width: changeSize(195rem);
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img {
+                    width: changeSize(145rem);
+                    height: changeSize(145rem);
+                    border-radius: 50%;
+                }
+            }
+            .header-r {
+                flex: 1;
+                height: 100%;
+                h3 {
+                    margin-top: changeSize(66rem);
+                    font-size: changeSize(29rem);
+                }
+                p {
+                    margin: changeSize(20rem) 0;
+                    color: #919598;
+                    font-size: changeSize(19rem);
+                }
+                .habbit-box {
+                    padding-right: changeSize(157rem);
+                    display: flex;
+                    a {
+                        font-size: changeSize(25rem);
+                        color: black;
+                        flex: 1;
+                    }
+                }
+            }
+            .header-arrow {
+                width: changeSize(21rem);
+                height: changeSize(35rem);
+                align-self: center;
+            }
+        }
+        // 礼物区域
+        .self-gift {
+            height: changeSize(160rem);
+            display: flex;
+            background-color: white;
+            >div {
+                height: 100%;
+                flex: 1
+            }
+            // 左边区域 
+            .gift-l {
+                border-right: changeSize(1px) solid #DEDEDE;
+                display: flex;
+                .l-img {
+                    width: changeSize(135rem);
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    img {
+                        width: changeSize(80rem);
+                        height: changeSize(80rem);
+                    }
+                }
+                .l-info {
+                    h4 {
+                        margin-top: changeSize(50rem);
+                        font-size: changeSize(28rem);
+                        position: relative;
+                        &::before {
+                            content: '上新';
+                            position: absolute;
+                            background-color: #CB3234;
+                            width: changeSize(54rem);
+                            height: changeSize(26rem);
+                            border-radius: changeSize(26rem);
+                            font-size: changeSize(15rem);
+                            color: white;
+                            text-align: center;
+                            line-height: changeSize(26rem);
+                            right: changeSize(-4rem);
+                            transform: translateX(100%);
+                            top: changeSize(2rem);
+                        }
+                    }
+                    p {
+                        font-size: changeSize(22rem);
+                        margin-top: changeSize(20rem);
+                        color: #A1BF43;
+                        padding-left: changeSize(35rem);
+                        background: url("../img/01.app-icons/welfare_new_count_icon.png") no-repeat left/changeSize(22rem) changeSize(22rem);
+                    }
+                }
+            }
+            // 右边区域
+            .gift-r {
+                display: flex;
+                .r-img {
+                    width: changeSize(135rem);
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    img {
+                        width: changeSize(80rem);
+                        height: changeSize(80rem);
+                    }
+                }
+                .r-info {
+                    h4 {
+                        margin-top: changeSize(50rem);
+                        font-size: changeSize(28rem);
+                    }
+                    p {
+                        font-size: changeSize(19rem);
+                        margin-top: changeSize(20rem);
+                        color:#8D8D8D;
+                    }
+                }
+            }
+        }
+    }
