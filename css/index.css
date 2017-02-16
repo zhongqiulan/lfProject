@@ -868,6 +868,70 @@ body {
   background-size: 2.8125rem 1.875rem;
 }
 
+.index {
+  background-color: white;
+  padding-top: 3.875rem;
+  padding-bottom: 3.03125rem;
+}
+.index .index-pagination {
+  height: 3.875rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  border-bottom: 0.0625rem solid #ECEDE7;
+  background-color: white;
+  position: absolute;
+  top: 0px;
+}
+.index .index-pagination span {
+  height: 2.625rem;
+  line-height: 2.625rem;
+  color: black;
+  width: 30%;
+  border-radius: 0;
+  background-color: transparent;
+  cursor: none;
+}
+.index .index-pagination span.swiper-pagination-bullet-active {
+  border-bottom: 0.125rem solid #9AC327;
+}
+.index .add-friend {
+  position: absolute;
+  height: 1rem;
+  width: 1.28125rem;
+  background: url("../img/01.app-icons/dashboard_find_friend.png") no-repeat center/contain;
+  right: 1.03125rem;
+  top: 2.125rem;
+  z-index: 20;
+}
+.index .index-container {
+  height: 100%;
+}
+
+.index-attention-container {
+  height: 100%;
+}
+.index-attention-container .index-attention-slide {
+  height: auto;
+}
+
+.index-subscribe-container {
+  height: 100%;
+}
+.index-subscribe-container .index-subscribe-slide {
+  height: auto;
+}
+
 .discover .header {
   background-color: white;
   padding: 0.625rem 0.625rem 0.3125rem;

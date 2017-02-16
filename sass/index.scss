@@ -2,12 +2,11 @@
 @import 'normalize.min.scss';
 @import 'swiper.min.scss';
 //  导入 自己定义的函数
-@import 'function.scss'; 
+@import 'function.scss';
 // 导入自己的base文件
 @import 'base.scss';
 //  导入 分辨屏幕的样式
 @import 'screen.scss';
-
 html,
 body {
     height: 100%;
@@ -104,36 +103,104 @@ body {
 }
 
 //  首页
+.index {
+    // 顶级背景色
+    background-color: white;
+    //  设置上下的 padding
+    padding-top: changeSize(124rem);
+    padding-bottom: changeSize(97rem);
+    //  顶级swiper 分页器的样式
+    .index-pagination {
+        height: changeSize(124rem);
+        width: 100%;
+        display: flex;
+        //  左右居中
+        justify-content: center;
+        align-items: flex-end;
+        // 底部横线
+        border-bottom: changeSize(2rem) solid #ECEDE7;
+        //  背景为白色
+        background-color: white;
+        //  使用定位的方式 设置到顶部
+        position: absolute;
+        top:0px;
+        span {
+            height: changeSize(84rem);
+            line-height: changeSize(84rem);
+            color: black;
+            width: 30%;
+            border-radius: 0;
+            background-color: transparent;
+            //  去除高亮效果
+            cursor: none;
+            &.swiper-pagination-bullet-active {
+                border-bottom: changeSize(4rem) solid #9AC327;
+            }
+        }
+    }
+    //  添加好友的a标签
+    .add-friend {
+        position: absolute;
+        height: changeSize(32rem);
+        width: changeSize(41rem);
+        background: url("../img/01.app-icons/dashboard_find_friend.png") no-repeat center/contain;
+        //  位置
+        right: changeSize(33rem);
+        top: changeSize(68rem);
+        //  设置层级
+        z-index: 20;
+    }
+    //  顶级swiper的高度
+    .index-container {
+        height: 100%;
+    }
+}
+
+//  首页 关注区域样式
+.index-attention-container {
+    height: 100%;
+    .index-attention-slide {
+        height: auto;
+    }
+}
+
+//  首页 订阅区域样式
+.index-subscribe-container{
+    height: 100%;
+    .index-subscribe-slide {
+        height: auto;
+    }
+} 
 
 //  发现区域 
-.discover{
-    .header{
+.discover {
+    .header {
         background-color: white;
         padding: (20rem/32) (20rem/32) (10rem/32);
         //  定位
         position: relative;
-        input{
-            height:(60rem/32) ;
+        input {
+            height: (60rem/32);
             width: 100%;
             background-color: #eee;
             border-radius: (10rem/32);
             padding-left: changeSize(160rem);
         }
-        a{
+        a {
             position: absolute;
-            &.search{
+            &.search {
                 width: changeSize(32rem);
-                height:changeSize(32rem);
+                height: changeSize(32rem);
                 background: url('../img/01.app-icons/explore_search.png') no-repeat center /contain;
-                left:changeSize(125rem);
-                top:changeSize(33rem);
+                left: changeSize(125rem);
+                top: changeSize(33rem);
             }
-            &.add{
+            &.add {
                 width: changeSize(42rem);
                 height: changeSize(35rem);
                 background: url('../img/01.app-icons/dashboard_find_friend.png') no-repeat center/cover;
-                top:changeSize(10rem);
-                right:changeSize(17rem);
+                top: changeSize(10rem);
+                right: changeSize(17rem);
                 box-sizing: content-box;
                 padding: 10px;
                 background-origin: content-box;
