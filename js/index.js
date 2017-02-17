@@ -6,6 +6,8 @@ window.onload = function () {
     indexSwiperReset();
     // 区域3 的swiper
     messageSwiperReset();
+    // 区域4 的swiper
+    selfSwiperReset(); 
 }
 
 //  初始化顶级swiper
@@ -58,9 +60,10 @@ function indexSwiperReset() {
 }
 
 // 初始化 区域3的 swiper
-function messageSwiperReset(){
-    var messageSwiper = new Swiper('.message-container',{
-         //  分页器
+function messageSwiperReset() {
+    // 顶级swiper 
+    var messageSwiper = new Swiper('.message-container', {
+        //  分页器
         pagination: '.message-pagination',
         //  分页器允许点击
         paginationClickable: true,
@@ -70,10 +73,40 @@ function messageSwiperReset(){
                 return '<span class="' + className + '">动态</span>';
             } else if (index == 1) {
                 return '<span class="' + className + '">消息</span>';
-            }else if(index ==2){
+            } else if (index == 2) {
                 return '<span class="' + className + '">聊天</span>';
             }
 
         }
     })
+
+    //  动态子区域swiper
+    var trendSwiper = new Swiper('.message-trend-container', {
+        //  滚动条 
+        scrollbar: '.message-trend-container>.swiper-scrollbar',
+        direction: 'vertical',
+        slidesPerView: 'auto',
+        mousewheelControl: true,
+        freeMode: true
+    })
+    // 消息 子区域Swiper
+    var newsSwiper = new Swiper('.message-news-container', {
+        //  滚动条 
+        direction: 'vertical',
+        slidesPerView: 'auto',
+        mousewheelControl: true,
+        freeMode: true
+    })
 }
+
+// 我的区域
+function selfSwiperReset(){
+    // 顶级container
+    var trendSwiper = new Swiper('.self-container', {
+        //  滚动条 
+        direction: 'vertical',
+        slidesPerView: 'auto',
+        mousewheelControl: true,
+        freeMode: true
+    })
+} 

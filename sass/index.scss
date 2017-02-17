@@ -251,28 +251,59 @@
             }
         }
         // 内容区域
+        .message-container {
+            height: 100%;
+        }
+    }
+    
+    // 信息区域 - 内容区域 设置 swiper的样式
+    .message-trend {
+        .message-trend-container {
+            height: 100%;
+            .message-trend-slide {
+                height: auto;
+            }
+        }
+    }
+    
+    .message-news {
+        .message-news-container {
+            height: 100%;
+            .message-news-slide {
+                height: auto;
+            }
+        }
     }
     
     // 我的 区域
     .self {
-        // background-color: white;
+        // 设置swiper的样式
+        .self-container {
+            height: 100%;
+            // padding-bottom: changeSize(97rem);
+            margin: 0;
+            background: url('../img/04.normal/self-bg.jpg')no-repeat top center /cover;
+        }
+    }
+    
+    // 我的区域 内部布局.
+    .self-slide {
         display: flex;
         flex-direction: column;
-        // 顶部区域 
         .self-header {
             height: changeSize(240rem);
             display: flex;
             position: relative;
             background-color: rgba(255, 255, 255, .5);
-            // 伪元素 制作 背景图片
-            &::before {
-                content: '';
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                background: url("../img/02.head-icons/lofter_header_icon_ (1000).jpg") no-repeat center /cover;
-                z-index: -1;
-            }
+            // // 伪元素 制作 背景图片
+            // &::before {
+            //     content: '';
+            //     position: absolute;
+            //     width: 100%;
+            //     height: 100%;
+            //     background: url("../img/02.head-icons/lofter_header_icon_ (1000).jpg") no-repeat center /cover;
+            //     z-index: -1;
+            // }
             .header-l {
                 width: changeSize(195rem);
                 height: 100%;
