@@ -170,12 +170,242 @@
         }
     }
     
+    // 首页 关注区域样式
+    .index-attention-slide {
+        // 列表数据 
+        .item {
+            // 顶部区域
+            .top {
+                height: changeSize(120rem);
+                background-color: white;
+                display: flex;
+                align-items: center;
+                padding-left: changeSize(32rem);
+                padding-right: changeSize(36rem);
+                img {
+                    width: changeSize(82rem);
+                    height: changeSize(82rem);
+                    border-radius: 50%;
+                    margin-right: changeSize(32rem);
+                }
+                h3 {
+                    font-size: changeSize(28rem);
+                    display: flex;
+                    justify-content: space-between;
+                    flex: 1;
+                    span {
+                        font-size: changeSize(25rem);
+                        color: #adadad;
+                    }
+                }
+            }
+            // 内容区域
+            .img-box {
+                img {
+                    display: block;
+                    width: 100%;
+                }
+            }
+            // 内容区域
+            .content {
+                padding: 0 changeSize(32rem) changeSize(32rem);
+                font-size: changeSize(30rem);
+                .name {
+                    padding-top: changeSize(34rem);
+                    text-decoration: underline;
+                    font-size: changeSize(30rem);
+                }
+                .info {
+                    margin: changeSize(30rem) 0;
+                    padding-top: changeSize(20rem);
+                    padding-bottom: changeSize(20rem);
+                    padding-left: changeSize(32rem);
+                    border-left: changeSize(1rem) solid #9a9a9a;
+                }
+                .from {
+                    display: flex;
+                    color: #696969;
+                    font-weight: 900;
+                    font-size: changeSize(30rem);
+                    img {
+                        width: changeSize(30rem);
+                        height: changeSize(28rem);
+                        margin-right: changeSize(18rem);
+                    }
+                    span {
+                        color: #9e9e9e;
+                        margin-right: changeSize(14rem);
+                    }
+                }
+                .key-words {
+                    color: #9f9f9f;
+                    padding: changeSize(40rem) 0 changeSize(32rem);
+                    border-bottom: changeSize(1rem) dashed #9f9f9f;
+                    span:nth-child(n+2) {
+                        margin-right: changeSize(30rem);
+                    }
+                }
+                .control {
+                    padding: changeSize(40rem) 0;
+                    img {
+                        width: changeSize(46rem);
+                        height: changeSize(42rem);
+                        margin-right: changeSize(76rem);
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                    }
+                }
+                .hot {
+                    color: #afafaf;
+                }
+            }
+        }
+        // 可能感兴趣的人
+        .interest {
+            background-color: #f6f6f6;
+            h5 {
+                font-size: changeSize(25rem);
+                color: #acacac;
+                padding-top: changeSize(31rem);
+                padding-bottom: changeSize(31rem);
+                padding-left: changeSize(25rem);
+            }
+            //   
+            .interest-container {
+                height: changeSize(535rem);
+                // 布局区域
+                .interest-slide {
+                    display: flex;
+                    flex-direction: column;
+                    position: relative;
+                    align-items: center;
+                    background-color: white;
+                    width: changeSize(542rem);
+                    .delete {
+                        position: absolute;
+                        top: changeSize(15rem);
+                        right: changeSize(15rem);
+                    }
+                    .icon {
+                        width: changeSize(100rem);
+                        height: changeSize(100rem);
+                        border-radius: 50%;
+                        margin-top: changeSize(30rem);
+                    }
+                    h4 {
+                        margin: changeSize(23rem) 0;
+                        font-weight: 900;
+                        font-size: changeSize(24rem);
+                        color: black;
+                    }
+                    p {
+                        font-size: changeSize(22rem);
+                        color: #c4c4c4;
+                        margin-bottom: changeSize(21rem);
+                    }
+                    .interest-slide-imgs {
+                        display: flex;
+                        img {
+                            width: 33.3333333333%;
+                            height: 100%;
+                            border: changeSize(1rem) solid white;
+                        }
+                    }
+                    //  关注按钮 
+                    input {
+                        width: changeSize(142rem);
+                        height: changeSize(62rem);
+                        border: 1px solid #94bb00;
+                        border-radius: changeSize(62rem);
+                        background-color: transparent;
+                        color: #94bb00;
+                        margin-top: changeSize(30rem);
+                    }
+                }
+            }
+        }
+    }
+    
     //  首页 订阅区域样式
     .index-subscribe-container {
         height: 100%;
         .index-subscribe-slide {
             height: auto;
-            background-color: white;
+        }
+    }
+    
+    // 首页 订阅区域样式
+    .index-subscribe-slide {
+        .subscribe-content {
+            margin-top: changeSize(26rem);
+            .title {
+                height: changeSize(71rem);
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                padding-left: changeSize(28rem);
+                border-bottom: changeSize(1rem) solid lightgray;
+                background-color: white;
+                span {
+                    font-size: changeSize(25rem);
+                    color: #828282;
+                }
+            }
+            //  列表区域 
+            .items {
+                background-color: white;
+                .item {
+                    display: flex;
+                    height: changeSize(105rem);
+                    .item-l {
+                        width: changeSize(126rem);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        img {
+                            width: changeSize(72rem);
+                            height: changeSize(72rem);
+                        }
+                    }
+                    .item-r {
+                        display: flex;
+                        flex: 1;
+                        justify-content: space-between;
+                        padding-right: changeSize(28rem);
+                        align-items: center;
+                        border-bottom: changeSize(1rem)solid lightgray;
+                        .r-l {
+                            h5 {
+                                font-size: changeSize(20rem);
+                                margin-top: changeSize(29rem);
+                            }
+                            p {
+                                font-size: changeSize(20rem);
+                                margin-top: changeSize(23rem);
+                                color: #b3b3b3;
+                            }
+                        }
+                        input {
+                            width: changeSize(84rem);
+                            height: changeSize(49rem);
+                            border-radius: changeSize(49rem);
+                            border: changeSize(1rem) solid#9cb54b;
+                            color: #9cb54b;
+                            font-size: changeSize(22rem);
+                            background-color: transparent;
+                        }
+                    }
+                }
+            }
+            // 底部区域
+            .footer{
+                height: changeSize(70rem);
+                background-color: white;
+                text-align: center;
+                line-height: changeSize(70rem);
+                margin:changeSize(27rem)0;
+            }
         }
     }
     
@@ -288,41 +518,41 @@
                             height: changeSize(176rem);
                             border-radius: 50%;
                         }
-                        .name{
-                            margin:changeSize(17rem) 0;
-                            font-size:changeSize(30rem);
+                        .name {
+                            margin: changeSize(17rem) 0;
+                            font-size: changeSize(30rem);
                         }
-                        .info{
+                        .info {
                             margin-bottom: changeSize(51rem);
-                            color:#9a9a9a;
+                            color: #9a9a9a;
                             font-size: changeSize(26rem);
                         }
                     }
                 }
             }
             //  更多达人
-            .more{
+            .more {
                 height: changeSize(109rem);
                 text-align: center;
                 line-height: changeSize(109rem);
-                border-top:changeSize(1rem) solid #dcdcdc;
-                color:#a1c30f;
+                border-top: changeSize(1rem) solid #dcdcdc;
+                color: #a1c30f;
                 background-color: white;
             }
             //  文章推荐
-            .novel{
+            .novel {
                 margin-top: changeSize(40rem);
                 background-color: white;
-                h4{
-                    color:#979797;
+                h4 {
+                    color: #979797;
                     padding-top: changeSize(32rem);
                     padding-bottom: changeSize(32rem);
                     padding-left: changeSize(40rem);
                 }
-                .items{
+                .items {
                     display: flex;
                     flex-wrap: wrap;
-                    img{
+                    img {
                         width: 33.3333%;
                         height: 33.33333%;
                         border: changeSize(1rem) solid white;

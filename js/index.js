@@ -50,6 +50,14 @@ function indexSwiperReset() {
         mousewheelControl: true,
         freeMode: true
     })
+
+    //  关注区域的  兴趣区域
+    var interestSwiper = new Swiper('.interest-container', {
+        spaceBetween: 30,
+        freeMode: true,
+        slidesPerView: 'auto'
+    });
+
     //  订阅区域的 swiper
     var subscribeSwiper = new Swiper('.index-subscribe-container', {
         //  滚动条 
@@ -78,23 +86,23 @@ function discoverSwiperReset() {
         autoplay: 2000,
         loop: true,
         // 用户操作是否停止自动播放
-        autoplayDisableOnInteraction : false,
+        autoplayDisableOnInteraction: false,
         // 如果需要分页器
         pagination: '.banner-pagination',
 
     })
-    
+
     // 达人轮播区域
-    var masterSwiper = new Swiper('.master-container',{
+    var masterSwiper = new Swiper('.master-container', {
         slidesPerView: 'auto',
         centeredSlides: true,
         effect: 'coverflow',
-         coverflow: {
+        coverflow: {
             rotate: 0,
             stretch: -30,
             depth: 100,
             modifier: 1,
-            slideShadows : false
+            slideShadows: false
         }
     })
 }
