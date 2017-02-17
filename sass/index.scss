@@ -234,6 +234,7 @@
             // 定位 设置上去
             position: absolute;
             top: 0;
+            border-bottom: changeSize(1rem) solid #ececec;
             span {
                 background-color: white;
                 border-radius: 0;
@@ -254,6 +255,9 @@
     
     // 我的 区域
     .self {
+        // background-color: white;
+        display: flex;
+        flex-direction: column;
         // 顶部区域 
         .self-header {
             height: changeSize(240rem);
@@ -261,7 +265,7 @@
             position: relative;
             background-color: rgba(255, 255, 255, .5);
             // 伪元素 制作 背景图片
-            &::after {
+            &::before {
                 content: '';
                 position: absolute;
                 width: 100%;
@@ -314,6 +318,8 @@
             height: changeSize(160rem);
             display: flex;
             background-color: white;
+            // 底部边框
+            border-bottom: changeSize(1rem) solid #E5E5E5;
             >div {
                 height: 100%;
                 flex: 1
@@ -385,7 +391,43 @@
                     p {
                         font-size: changeSize(19rem);
                         margin-top: changeSize(20rem);
-                        color:#8D8D8D;
+                        color: #8D8D8D;
+                    }
+                }
+            }
+        }
+        // 设置区域
+        .self-setting {
+            background-color: white;
+            flex: 1;
+            li {
+                height: changeSize(90rem);
+                display: flex;
+                .setting-l {
+                    height: 100%;
+                    width: changeSize(92rem);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    img {
+                        width: changeSize(40rem);
+                        height: changeSize(40rem);
+                    }
+                }
+                .setting-r {
+                    border-bottom: 1px solid #eee;
+                    height: 100%;
+                    flex: 1;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding-right: changeSize(27rem);
+                    p {
+                        font-size: changeSize(30rem);
+                    }
+                    img {
+                        width: changeSize(18rem);
+                        height: changeSize(25rem);
                     }
                 }
             }
