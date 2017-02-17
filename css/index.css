@@ -938,10 +938,17 @@ body {
   background-color: white;
 }
 
+.discover {
+  height: 100%;
+  padding-top: 2.8125rem;
+  padding-bottom: 3.03125rem;
+}
 .discover .header {
   background-color: white;
   padding: 0.625rem 0.625rem 0.3125rem;
-  position: relative;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
 .discover .header input {
   height: 1.875rem;
@@ -969,6 +976,132 @@ body {
   box-sizing: content-box;
   padding: 10px;
   background-origin: content-box;
+}
+.discover .discover-container {
+  height: 100%;
+}
+.discover .discover-container .discover-slide {
+  height: auto;
+}
+.discover .discover-slide .banner-container {
+  height: 8.0625rem;
+}
+.discover .discover-slide .banner-container img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.discover .discover-slide .master-container {
+  height: 22.03125rem;
+  background-color: #eee;
+  padding-top: 1.125rem;
+}
+.discover .discover-slide .master-container .master-slider {
+  width: 15.25rem;
+  height: 18.5rem;
+  background-color: white;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  box-shadow: 0 0 0.3125rem #eee;
+}
+.discover .discover-slide .master-container .master-slider h4 {
+  text-align: center;
+  margin: 0.9375rem 0 1.03125rem;
+}
+.discover .discover-slide .master-container .master-slider .items {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.discover .discover-slide .master-container .master-slider .items img {
+  width: 50%;
+  height: 50%;
+  border: 1px solid white;
+}
+.discover .discover-slide .commend {
+  background-color: white;
+  overflow: hidden;
+}
+.discover .discover-slide .commend h4 {
+  color: #969696;
+  margin-top: 1.03125rem;
+  margin-left: 0.96875rem;
+  margin-bottom: 1.28125rem;
+}
+.discover .discover-slide .commend .items {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  list-style: none;
+}
+.discover .discover-slide .commend .items li {
+  width: 33.33333%;
+  text-align: center;
+}
+.discover .discover-slide .commend .items li img {
+  width: 5.5rem;
+  height: 5.5rem;
+  border-radius: 50%;
+}
+.discover .discover-slide .commend .items li .name {
+  margin: 0.53125rem 0;
+  font-size: 0.9375rem;
+}
+.discover .discover-slide .commend .items li .info {
+  margin-bottom: 1.59375rem;
+  color: #9a9a9a;
+  font-size: 0.8125rem;
+}
+.discover .discover-slide .more {
+  height: 3.40625rem;
+  text-align: center;
+  line-height: 3.40625rem;
+  border-top: 0.03125rem solid #dcdcdc;
+  color: #a1c30f;
+  background-color: white;
+}
+.discover .discover-slide .novel {
+  margin-top: 1.25rem;
+  background-color: white;
+}
+.discover .discover-slide .novel h4 {
+  color: #979797;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1.25rem;
+}
+.discover .discover-slide .novel .items {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+.discover .discover-slide .novel .items img {
+  width: 33.3333%;
+  height: 33.33333%;
+  border: 0.03125rem solid white;
 }
 
 .message {

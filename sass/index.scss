@@ -181,11 +181,17 @@
     
     //  发现区域 
     .discover {
+        height: 100%;
+        padding-top: changeSize(90rem);
+        padding-bottom: changeSize(97rem);
+        // 顶部区域
         .header {
             background-color: white;
             padding: (20rem/32) (20rem/32) (10rem/32);
             //  定位
-            position: relative;
+            position: absolute;
+            top: 0;
+            width: 100%;
             input {
                 height: (60rem/32);
                 width: 100%;
@@ -214,6 +220,117 @@
                 }
             }
         }
+        //  设置容器外观
+        .discover-container {
+            height: 100%;
+            .discover-slide {
+                height: auto;
+            }
+        }
+        // 发现区域内部布局
+        .discover-slide {
+            //  banner的布局
+            .banner-container {
+                height: changeSize(258rem);
+                img {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            // master的布局
+            .master-container {
+                height: changeSize(705rem);
+                background-color: #eee;
+                padding-top: changeSize(36rem);
+                .master-slider {
+                    width: changeSize(488rem);
+                    height: changeSize(592rem);
+                    background-color: white;
+                    display: flex;
+                    flex-direction: column;
+                    box-shadow: 0 0 changeSize(10rem) #eee;
+                    h4 {
+                        text-align: center;
+                        margin: changeSize(30rem) 0 changeSize(33rem);
+                    }
+                    .items {
+                        display: flex;
+                        flex-wrap: wrap;
+                        flex: 1;
+                        img {
+                            width: 50%;
+                            height: 50%;
+                            border: 1px solid white;
+                        }
+                    }
+                }
+            }
+            // 推荐区域
+            .commend {
+                background-color: white;
+                overflow: hidden;
+                h4 {
+                    color: #969696;
+                    margin-top: changeSize(33rem);
+                    margin-left: changeSize(31rem);
+                    margin-bottom: changeSize(41rem);
+                }
+                .items {
+                    display: flex;
+                    flex-wrap: wrap;
+                    list-style: none;
+                    li {
+                        width: 33.33333%;
+                        text-align: center;
+                        img {
+                            width: changeSize(176rem);
+                            height: changeSize(176rem);
+                            border-radius: 50%;
+                        }
+                        .name{
+                            margin:changeSize(17rem) 0;
+                            font-size:changeSize(30rem);
+                        }
+                        .info{
+                            margin-bottom: changeSize(51rem);
+                            color:#9a9a9a;
+                            font-size: changeSize(26rem);
+                        }
+                    }
+                }
+            }
+            //  更多达人
+            .more{
+                height: changeSize(109rem);
+                text-align: center;
+                line-height: changeSize(109rem);
+                border-top:changeSize(1rem) solid #dcdcdc;
+                color:#a1c30f;
+                background-color: white;
+            }
+            //  文章推荐
+            .novel{
+                margin-top: changeSize(40rem);
+                background-color: white;
+                h4{
+                    color:#979797;
+                    padding-top: changeSize(32rem);
+                    padding-bottom: changeSize(32rem);
+                    padding-left: changeSize(40rem);
+                }
+                .items{
+                    display: flex;
+                    flex-wrap: wrap;
+                    img{
+                        width: 33.3333%;
+                        height: 33.33333%;
+                        border: changeSize(1rem) solid white;
+                    }
+                }
+            }
+        }
+        // 
     }
     
     //  信息区域

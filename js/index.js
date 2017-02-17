@@ -4,10 +4,12 @@ window.onload = function () {
     lofterSwiperReset();
     //  区域1 的swiper
     indexSwiperReset();
+    // 区域2 的swiper
+    discoverSwiperReset();
     // 区域3 的swiper
     messageSwiperReset();
     // 区域4 的swiper
-    selfSwiperReset(); 
+    selfSwiperReset();
 }
 
 //  初始化顶级swiper
@@ -59,6 +61,44 @@ function indexSwiperReset() {
     })
 }
 
+// 初始化 区域2的swiper
+function discoverSwiperReset() {
+    // 顶级swiper
+    var discoverSwiper = new Swiper('.discover-container', {
+        //  滚动条 
+        scrollbar: '.discover-container>.swiper-scrollbar',
+        direction: 'vertical',
+        slidesPerView: 'auto',
+        mousewheelControl: true,
+        freeMode: true
+    })
+
+    // 顶部banner
+    var bannerSwiper = new Swiper(".banner-container", {
+        autoplay: 2000,
+        loop: true,
+        // 用户操作是否停止自动播放
+        autoplayDisableOnInteraction : false,
+        // 如果需要分页器
+        pagination: '.banner-pagination',
+
+    })
+    
+    // 达人轮播区域
+    var masterSwiper = new Swiper('.master-container',{
+        slidesPerView: 'auto',
+        centeredSlides: true,
+        effect: 'coverflow',
+         coverflow: {
+            rotate: 0,
+            stretch: -30,
+            depth: 100,
+            modifier: 1,
+            slideShadows : false
+        }
+    })
+}
+
 // 初始化 区域3的 swiper
 function messageSwiperReset() {
     // 顶级swiper 
@@ -97,7 +137,7 @@ function messageSwiperReset() {
         mousewheelControl: true,
         freeMode: true
     })
-        // 消息 子区域Swiper
+    // 消息 子区域Swiper
     var chatSwiper = new Swiper('.message-chat-container', {
         //  滚动条 
         direction: 'vertical',
@@ -108,7 +148,7 @@ function messageSwiperReset() {
 }
 
 // 我的区域
-function selfSwiperReset(){
+function selfSwiperReset() {
     // 顶级container
     var trendSwiper = new Swiper('.self-container', {
         //  滚动条 
@@ -117,4 +157,4 @@ function selfSwiperReset(){
         mousewheelControl: true,
         freeMode: true
     })
-} 
+}
