@@ -10,6 +10,7 @@
     html,
     body {
         height: 100%;
+        font-family: sans-serif;
     }
     
     body {
@@ -256,7 +257,7 @@
         }
     }
     
-    // 信息区域 - 内容区域 设置 swiper的样式
+    // 信息区域 - 动态部分 设置 swiper的样式
     .message-trend {
         .message-trend-container {
             height: 100%;
@@ -266,11 +267,211 @@
         }
     }
     
+    // 信息区域-动态部分 样式设置
+    .message-trend-slide {
+        .section {
+            display: flex;
+            .section-l {
+                width: changeSize(106rem);
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                padding-top: changeSize(22rem);
+                img {
+                    width: changeSize(73rem);
+                    height: changeSize(73rem);
+                    border-radius: 50%;
+                }
+            }
+            .section-r {
+                border-bottom: changeSize(1rem) solid #e5e5e5;
+                flex: 1;
+                h3 {
+                    font-size: changeSize(23rem);
+                    margin-top: changeSize(25rem);
+                    span {
+                        color: #afafaf;
+                    }
+                }
+                p {
+                    font-size: changeSize(23rem);
+                    color: #d5d5d5;
+                    margin-top: changeSize(21rem);
+                    margin-bottom: changeSize(18rem);
+                }
+                .section-r-content {
+                    display: flex;
+                    flex-wrap: wrap;
+                    .item {
+                        width: changeSize(122rem);
+                        height: changeSize(122rem);
+                        background: #ededed;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        margin-bottom: changeSize(17rem);
+                        margin-right: changeSize(6rem);
+                        font-size: changeSize(30rem);
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    // 信息区域 - 新闻部分 设置 swiper的样式
     .message-news {
         .message-news-container {
             height: 100%;
             .message-news-slide {
+                // height: auto;
+            }
+        }
+    }
+    
+    // 信息区域 - 新闻部分 样式设置
+    .message-news-slide {
+        display: flex;
+        flex-direction: column;
+        //  顶部区域
+        .top {
+            .section {
+                display: flex;
+                height: changeSize(122rem);
+                .section-l {
+                    width: changeSize(129rem);
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    img {
+                        width: changeSize(54rem);
+                        height: changeSize(54rem);
+                    }
+                }
+                .section-r {
+                    flex: 1;
+                    height: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    border-bottom: changeSize(1rem) solid #eee;
+                    padding-right: changeSize(28rem);
+                    h5 {
+                        font-size: changeSize(27rem);
+                        padding-left: changeSize(6rem);
+                    }
+                    img {
+                        width: changeSize(16rem);
+                        height: changeSize(25rem);
+                    }
+                }
+            }
+        }
+        // 底部区域
+        .bottom {
+            background-color: #f2f5f4;
+            overflow: hidden;
+            padding: 0 changeSize(27rem);
+            flex: 1;
+            .title {
+                width: 100%;
+                height: changeSize(1rem);
+                background-color: #e9eceb;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: changeSize(43rem) 0;
+                span {
+                    background-color: #f2f5f4;
+                    padding: 0 changeSize(20rem);
+                }
+            }
+            .info {
+                width: 100%;
+                height: changeSize(160rem);
+                background-color: white;
+                padding: changeSize(17rem);
+                display: flex;
+                align-items: center;
+                border-radius: changeSize(10rem);
+                img {
+                    width: changeSize(188rem);
+                    height: changeSize(123rem);
+                    border-radius: changeSize(10rem);
+                }
+                h5 {
+                    padding-left: changeSize(30rem);
+                    font-size: changeSize(25rem);
+                }
+            }
+            .more {
+                width: 100%;
+                height: changeSize(90rem);
+                text-align: center;
+                line-height: changeSize(90rem);
+                color: #9ab815;
+                margin-top: changeSize(27rem);
+                background-color: white;
+                border-radius: changeSize(10rem);
+            }
+        }
+    }
+    
+    // 信息区域 - 聊天部分 设置 swiper的样式
+    .message-chat {
+        .message-chat-container {
+            height: 100%;
+            background-color: #f2f5f4;
+            .message-chat-slide {
                 height: auto;
+            }
+        }
+    }
+    
+    // 信息区域-聊天部分 样式设置
+    .message-chat-slide {
+        background-color: white;
+        .section {
+            display: flex;
+            height: changeSize(123rem);
+            .section-l {
+                width: changeSize(139rem);
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img {
+                    width: changeSize(90rem);
+                    height: changeSize(90rem);
+                    border-radius: 50%;
+                }
+            }
+            .section-r {
+                flex: 1;
+                padding-right: changeSize(21rem);
+                h4 {
+                    font-size: changeSize(24rem);
+                    margin-top: changeSize(33rem);
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    span {
+                        color: #c7c7c7;
+                    }
+                }
+                p {
+                    font-size: changeSize(24rem);
+                    margin-top: changeSize(17rem);
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    height: changeSize(24rem);
+                    width: 100%;
+                    color: #999;
+                }
             }
         }
     }

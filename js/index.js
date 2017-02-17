@@ -97,6 +97,14 @@ function messageSwiperReset() {
         mousewheelControl: true,
         freeMode: true
     })
+        // 消息 子区域Swiper
+    var chatSwiper = new Swiper('.message-chat-container', {
+        //  滚动条 
+        direction: 'vertical',
+        slidesPerView: 'auto',
+        mousewheelControl: true,
+        freeMode: true
+    })
 }
 
 // 我的区域
