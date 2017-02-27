@@ -38,6 +38,11 @@ function indexSwiperReset() {
                 return '<span class="' + className + '">订阅</span>';
             }
 
+        },
+        onSlideChangeStart:function(swiper){
+            console.log(swiper.activeIndex);
+            console.log(swiper.wrapper[0].querySelector('.swiper-slide .index-attention-slide'));
+            console.log(swiper.wrapper[0].querySelector('.swiper-slide .index-subscribe-slide'));
         }
     })
 
@@ -48,14 +53,28 @@ function indexSwiperReset() {
         direction: 'vertical',
         slidesPerView: 'auto',
         mousewheelControl: true,
-        freeMode: true
+        freeMode: true,
+        preloadImages: false,
+        // 默认禁止拖动
+        noSwiping: true,
+        onInit: function (swiper) {
+            // 延迟 关闭 loading
+            setTimeout(function () {
+                // 关闭loading的 遮罩
+                swiper.wrapper[0].classList.remove('cover')
+                // 允许拖动 
+                swiper.params.noSwiping = false;
+            }, 1000);
+        }
     })
 
     //  关注区域的  兴趣区域
     var interestSwiper = new Swiper('.interest-container', {
         spaceBetween: 30,
         freeMode: true,
-        slidesPerView: 'auto'
+        slidesPerView: 'auto',
+        noSwiping: false
+
     });
 
     //  订阅区域的 swiper
@@ -65,7 +84,7 @@ function indexSwiperReset() {
         direction: 'vertical',
         slidesPerView: 'auto',
         mousewheelControl: true,
-        freeMode: true
+        freeMode: true,
     })
 }
 

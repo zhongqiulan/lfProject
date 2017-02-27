@@ -1,26 +1,23 @@
-*, ::before, ::after {
+*,
+::before,
+::after {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 a {
-  text-decoration: none;
-}
+  text-decoration: none; }
 
 input {
   border: none;
   -webkit-appearance: none;
-  outline: none;
-}
+  outline: none; }
 
 .f-l {
-  float: left;
-}
+  float: left; }
 
 .f-r {
-  float: right;
-}
+  float: right; }
 
 .clearfix::before,
 .clearfix::after {
@@ -29,9 +26,31 @@ input {
   clear: both;
   line-height: 0;
   height: 0;
-  visibility: hidden;
-}
+  visibility: hidden; }
 
 .clearfix {
-  zoom: 1;
-}
+  zoom: 1; }
+
+.cover::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: url("../img/03.loading/loading.gif") no-repeat center, #DEE4E4;
+  z-index: 30; }
+
+.loading::before {
+  content: '';
+  width: 100%;
+  height: changeSize(120rem);
+  position: absolute;
+  background: url("../img/03.loading/loading.gif") no-repeat center/changeSize(60rem) changeSize(60rem);
+  top: changeSize(-120rem); }
+
+.loading::after {
+  content: '';
+  width: 100%;
+  height: changeSize(120rem);
+  position: absolute;
+  background: url("../img/03.loading/loading.gif") no-repeat center/changeSize(60rem) changeSize(60rem);
+  bottom: changeSize(-120rem); }

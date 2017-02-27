@@ -1,26 +1,32 @@
-*,::before,::after{
+*,
+::before,
+::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-} 
-a{
+}
+
+a {
     text-decoration: none;
 }
-input{
+
+input {
     border: none;
     -webkit-appearance: none;
     outline: none;
 }
 
 //  快速浮动
-.f-l{
+.f-l {
     float: left;
-} 
-.f-r{
+}
+
+.f-r {
     float: right;
 }
+
 .clearfix::before,
-.clearfix::after{
+.clearfix::after {
     content: '';
     display: block;
     clear: both;
@@ -28,6 +34,36 @@ input{
     height: 0;
     visibility: hidden;
 }
-.clearfix{
+
+.clearfix {
     zoom: 1;
+}
+
+// swiper容器的遮罩层
+.cover::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: url('../img/03.loading/loading.gif') no-repeat center, #DEE4E4;
+    z-index: 30;
+}
+
+// slide 区域 的loading 动画
+.loading::before {
+    content: '';
+    width: 100%;
+    height: changeSize(120rem);
+    position: absolute;
+    background: url('../img/03.loading/loading.gif')no-repeat center /changeSize(60rem) changeSize(60rem);
+    top: changeSize(-120rem);
+}
+
+.loading::after {
+    content: '';
+    width: 100%;
+    height: changeSize(120rem);
+    position: absolute;
+    background: url('../img/03.loading/loading.gif')no-repeat center /changeSize(60rem) changeSize(60rem);
+    bottom: changeSize(-120rem);
 }
