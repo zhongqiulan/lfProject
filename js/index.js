@@ -64,7 +64,7 @@ function indexSwiperReset() {
                 swiper.wrapper[0].classList.remove('cover')
                 // 允许拖动 
                 swiper.params.noSwiping = false;
-            }, 1000);
+            }, 4000);
         }
     })
 
